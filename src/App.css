@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15%;
+  
+}
+/* Maybe could've been done easier with flex containers but I needed the grid practice*/
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
 }
 
-.App-link {
-  color: #61dafb;
+.about__about-me {
+  grid-row: 1 / 1;
+  grid-column: 1 / 3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about__portrait {
+  height: 310px;
+  border: 4px solid #FFA800
 }
+
+.about__name-spec-portrait {
+  grid-column: 1 / 3;
+  display: flex;
+  gap: 25px;
+  /* justify-content: space-between; */
+}
+
+.about__name-spec {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.education {
+  margin-top: 15%;
+}
+
+.education__whitworth-logo {
+  height: 97px;
+}
+
+.education__show-courses-btn {
+  border: 0px;
+  font-size: 30px;
+}
+
+.education__show-courses-btn:hover {
+  color: #FFA800;
+}
+
+.education__courses {
+  margin: 20px;
+}
+
+.education__course {
+  font-size: 25px;
+}
+
+.projects {
+  margin-top: 15%;
+}
+
+.projects__entry {
+  margin-left: 100px;
+}
+
+.entry__bullet-points {
+  margin-left: 100px;
+  font-size: 35px;
+}
+
+.entry__repo-link {
+  font-size: 35px;
+}
+
+.entry__repo-link:hover {
+  color: #FFA800;
+} 

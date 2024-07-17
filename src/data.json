@@ -1,0 +1,19 @@
+{
+  "courses": [
+    {
+      "name": "Software Engineering"
+    },
+    {
+      "name": "Operating Systems"
+    },
+    {
+      "name": "Hacking and Cybersecurity"
+    },
+    {
+      "name": "Computer Architecture"
+    },
+    {
+      "name": "Human-Computer Interaction"
+    }
+  ]
+}

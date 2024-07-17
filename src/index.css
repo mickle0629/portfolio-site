@@ -1,13 +1,52 @@
-body {
+*, *::before, *::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+  box-sizing: border;
+  background-color: #2C2A2A;
+  color: white;
+}
+
+body {
+  font-family: gothamNarrowBook, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+
+h1, h2, h3 {
+  font-family: gothamNarrowBold;
+}
+
+h1 {
+  color: #FFA800;
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 70px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 40px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: gothamNarrowBold;
+  src: url(./assets/GothamNarrow-Bold.otf);
+}
+
+@font-face {
+  font-family: gothamNarrowBook;
+  src: url(./assets/GothamNarrow-Book.otf);
 }

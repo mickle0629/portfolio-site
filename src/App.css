@@ -1,9 +1,30 @@
-.main-container {
+.content-container {
   display: flex;
   flex-direction: column;
   padding: 15%;
-  
 }
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20% 0 20%;
+  background-color: #FFA800;
+  height: 50px;
+  border-radius: 0 0 45px 45px;
+}
+
+.top-bar__btn {
+  background-color: transparent;
+  border: 0;
+  font-size: 30px;
+}
+
+.top-bar__btn:hover {
+  text-decoration: underline;
+}
+
 /* Maybe could've been done easier with flex containers but I needed the grid practice*/
 .about {
   display: grid;
@@ -78,3 +99,11 @@
 .entry__repo-link:hover {
   color: #FFA800;
 } 
+
+.language-input {
+  position: absolute;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  background-color: #FFA800;
+}

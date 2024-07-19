@@ -2,27 +2,41 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  return ( 
-    <main className='main-container'>
-      <section className='about'>
-        <h1 className='about__about-me'>About me</h1>
-        <div className='about__name-spec-portrait'>
-          <img className='about__portrait' src={require('./assets/digital-passport.jpg')} alt='portrait' />
-          <div className='about__name-spec'>
-            <div className='about__name-plate'>
-              <h2 className='about__name'>I'm An Dang</h2>
-              <p className='about__text'>Front-end Developer</p>
-            </div>
-            <div className='about__tech-specialization'>
-              <h3 className='about__spec-title'>Specializes in:</h3>
-              <p className='about__specializations'>React, with CSS & Tailwind</p>
+  const [language, setLanguage] = useState('en');
+
+  function handleScroll(element) {
+    element.scrollIntoView( { behavior: 'smooth' } );
+  }
+
+  return (
+    <>
+      <nav className='top-bar'>
+        <button className='top-bar__btn' onClick={() => handleScroll(document.querySelector('.about'))}>About</button>
+        <button className='top-bar__btn' onClick={() => handleScroll(document.querySelector('.education'))}>Education & Projects</button>
+        <button className='top-bar__btn'>Contact</button> {/*TODO: Build this part */}
+        {/* <LanguageToggleInput /> */}
+      </nav> 
+      <main className='content-container'>
+        <section className='about'>
+          <h1 className='about__about-me'>About me</h1>
+          <div className='about__name-spec-portrait'>
+            <img className='about__portrait' src={require('./assets/digital-passport.jpg')} alt='portrait' />
+            <div className='about__name-spec'>
+              <div className='about__name-plate'>
+                <h2 className='about__name'>I'm An Dang</h2>
+                <p className='about__text'>Front-end Developer</p>
+              </div>
+              <div className='about__tech-specialization'>
+                <h3 className='about__spec-title'>Specializes in:</h3>
+                <p className='about__specializations'>React, with CSS & Tailwind</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <EducationPanel />
-      <ProjectsPanel />
-    </main>
+        </section>
+        <EducationPanel />
+        <ProjectsPanel />
+      </main>
+    </>
   );
 }
 
@@ -103,5 +117,17 @@ function ProjectsPanel() {
         ))
       }
     </section>
+  )
+}
+
+function LanguageToggleInput() {
+  return (
+    <form className='language-input'>
+      <label for="language-select">Language: </label>
+      <select id='language-select' name='language-select'>
+        <option value='en'>English</option>
+        <option value='vn'>Vietnamese</option>
+      </select>
+    </form>
   )
 }
